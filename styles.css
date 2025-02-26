@@ -1,0 +1,131 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background:linear-gradient(rgba(72, 76, 87, 1), rgba(29, 31, 35, 1));
+    color: white;
+    text-align: center;
+}
+
+.imagebutton img {
+    width: 20px; /* Kohanda suurust */
+    height: 20px;
+}
+
+
+/* Päis */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background:linear-gradient(rgba(72, 76, 87, 1), rgba(29, 31, 35, 1));
+    font-size: 20px;
+}
+
+/* Hero sektsioon */
+.hero {
+    background: linear-gradient(rgba(72, 76, 87, 1), rgba(29, 31, 35, 1));
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px;
+    text-align: left;
+    display:flex
+}
+
+.hero h2 {
+    margin: 10px 0;
+}
+
+.hero img {
+    width: 200%;
+    max-width: 200px;
+    
+}
+
+button {
+    background:linear-gradient(rgba(72, 76, 87, 1), rgba(29, 31, 35, 1));
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 80px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Populaarsete toodete jaotis */
+.popular {
+    padding: 15px;
+    text-align: left;
+}
+
+.productgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0px;
+    padding-right: 0%;
+}
+
+.camera {
+    background: linear-gradient(rgba(72, 76, 87, 1), rgba(29, 31, 35, 1));
+    border-radius: 15px;
+    padding: 5px;
+    text-align: left;
+    position: relative;
+    gap: 5px;
+}
+
+.details-btn{
+    background:linear-gradient(rgba(72, 76, 87, 1), rgba(29, 31, 35, 1));
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 60px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.productcard img {
+    width: 60%;
+    border-radius: 10px;
+}
+
+.rating {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.price {
+    font-weight: bold;
+    color: white;
+    margin: 5px 0;
+    text-align: left;
+}
+
+/* Alumine navigeerimismenüü */
+.bottomnav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background:rgba(40, 42, 47, 1);
+    padding: 15px 0;
+}
+
+.bottomnav button {
+    background: none;
+    font-size: 20px;
+}
+
+@media (max-width: 600px) {
+    body {
+        background: linear-gradient(rgba(72, 76, 87, 1), rgba(29, 31, 35, 1));
+    }
+}

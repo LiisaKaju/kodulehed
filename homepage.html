@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelsCo.</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .productcard:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .details-btn:hover {
+            background-color: #555;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll(".details-btn").forEach(button => {
+        button.addEventListener("click", function(event) {
+            event.stopPropagation(); 
+            
+            const productCard = this.closest(".camera");
+            const productName = productCard.querySelector("h4").innerText.trim();
+            
+            const productLinks = {
+                "SONY 200mm Zoom": "sony-200mm-zoom.html",
+                "Canon EOS 30D": "canon-eos-30d.html",
+            };
+            
+            if (productLinks[productName]) {
+                window.location.href = productLinks[productName];
+            } else {
+                console.warn("Link puudub: " + productName);
+            }
+        });
+    });
+});
+</script>
+
+    
+<body>
+    <header>
+        <h1>PixelsCo.</h1>
+        <button class="details-btn">
+            <img src="images/iconbag.png" alt="iconbag">
+        </button>
+    </header>
+
+    <section class="hero">
+        <div class="herocontent">
+            <h2>New Vintage Collection</h2>
+            <button>Explore now</button>
+        </div>
+        <img src="images/camera1.png" alt="Vintage Camera">
+    </section>
+
+    <section class="popular">
+        <h3>Popular</h3>
+        <div class="productgrid">
+            <div class="camera">
+                <span class="rating">⭐ 4.5</span>
+                <img src="images/camera2.png" alt="Canon EOS 30D">
+                <h4>Canon EOS 30D</h4>
+                <p class="price">$16000</p>
+                <button class="details-btn">➜</button>
+            </div>
+            <div class="camera">
+                <span class="rating">⭐ 4.5</span>
+                <img src="images/camera3.png" alt="Sony 200mm Zoom">
+                <h4>SONY 200mm Zoom</h4>
+                <p class="price">$6000</p>
+                <button class="details-btn">➜</button>
+            </div>
+            <div class="camera">
+                <span class="rating">⭐ 4.5</span>
+                <img src="images/camera4.png" alt="Canon EOS 10D">
+                <h4>Canon EOS 10D</h4>
+                <p class="price">$16000</p>
+                <button class="details-btn">➜</button>
+            </div>
+            <div class="camera">
+                <span class="rating">⭐ 4.5</span>
+                <img src="images/camera5.png" alt="Canon5">
+                <h4>Canon5</h4>
+                <p class="price">$16000</p>
+                <button class="details-btn">➜</button>
+            </div>
+        </div>
+    </section>
+
+    <nav class="bottomnav">
+        <button class="homebutton">
+            <img src="images/home.png" alt="homebutton">
+        </button>
+        <button class="keepbutton">
+            <img src="images/keep.png" alt="keepbutton">
+        </button>
+        <button class="notificationbutton">
+            <img src="images/notification.png" alt="notificationbutton">
+        </button>
+        <button class="profilebutton">
+            <img src="images/profile.png" alt="profilebutton">
+        </button>
+    </nav>
+</body>
+</html>
